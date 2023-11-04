@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BCB047392AF5A4DB004C5A98 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB047382AF5A4DB004C5A98 /* Post.swift */; };
+		BCB0473B2AF5A5BA004C5A98 /* ListOfPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB0473A2AF5A5BA004C5A98 /* ListOfPosts.swift */; };
+		BCB0473D2AF5A6F1004C5A98 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB0473C2AF5A6F1004C5A98 /* Date.swift */; };
+		BCB0473F2AF5A85E004C5A98 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB0473E2AF5A85E004C5A98 /* Country.swift */; };
+		BCB047422AF5B5BB004C5A98 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB047412AF5B5BB004C5A98 /* InfoView.swift */; };
+		BCB047442AF5B92A004C5A98 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB047432AF5B92A004C5A98 /* InfoRow.swift */; };
+		BCB047462AF5B93B004C5A98 /* InfoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB047452AF5B93B004C5A98 /* InfoDetails.swift */; };
+		BCB047482AF5C16F004C5A98 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB047472AF5C16F004C5A98 /* String.swift */; };
+		BCB0474A2AF5DD14004C5A98 /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB047492AF5DD14004C5A98 /* HelloView.swift */; };
+		BCB0474C2AF5DD98004C5A98 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB0474B2AF5DD98004C5A98 /* SettingsView.swift */; };
 		BCFF956C2AF564BA0027ADDB /* GrandPrixCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF956B2AF564BA0027ADDB /* GrandPrixCalendarApp.swift */; };
 		BCFF956E2AF564BA0027ADDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFF956D2AF564BA0027ADDB /* ContentView.swift */; };
 		BCFF95702AF564BB0027ADDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFF956F2AF564BB0027ADDB /* Assets.xcassets */; };
@@ -14,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BCB047382AF5A4DB004C5A98 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BCB0473A2AF5A5BA004C5A98 /* ListOfPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfPosts.swift; sourceTree = "<group>"; };
+		BCB0473C2AF5A6F1004C5A98 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		BCB0473E2AF5A85E004C5A98 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		BCB047412AF5B5BB004C5A98 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		BCB047432AF5B92A004C5A98 /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		BCB047452AF5B93B004C5A98 /* InfoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetails.swift; sourceTree = "<group>"; };
+		BCB047472AF5C16F004C5A98 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		BCB047492AF5DD14004C5A98 /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
+		BCB0474B2AF5DD98004C5A98 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		BCFF95682AF564BA0027ADDB /* GrandPrixCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrandPrixCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFF956B2AF564BA0027ADDB /* GrandPrixCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrandPrixCalendarApp.swift; sourceTree = "<group>"; };
 		BCFF956D2AF564BA0027ADDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BCB047402AF5AD64004C5A98 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BCB047382AF5A4DB004C5A98 /* Post.swift */,
+				BCB0473A2AF5A5BA004C5A98 /* ListOfPosts.swift */,
+				BCB0473E2AF5A85E004C5A98 /* Country.swift */,
+				BCB0473C2AF5A6F1004C5A98 /* Date.swift */,
+				BCB047472AF5C16F004C5A98 /* String.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		BCFF955F2AF564BA0027ADDB = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +85,12 @@
 			children = (
 				BCFF956B2AF564BA0027ADDB /* GrandPrixCalendarApp.swift */,
 				BCFF956D2AF564BA0027ADDB /* ContentView.swift */,
+				BCB047412AF5B5BB004C5A98 /* InfoView.swift */,
+				BCB047432AF5B92A004C5A98 /* InfoRow.swift */,
+				BCB047452AF5B93B004C5A98 /* InfoDetails.swift */,
+				BCB047492AF5DD14004C5A98 /* HelloView.swift */,
+				BCB0474B2AF5DD98004C5A98 /* SettingsView.swift */,
+				BCB047402AF5AD64004C5A98 /* DataModel */,
 				BCFF956F2AF564BB0027ADDB /* Assets.xcassets */,
 				BCFF95712AF564BB0027ADDB /* Preview Content */,
 			);
@@ -137,8 +175,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCB047392AF5A4DB004C5A98 /* Post.swift in Sources */,
+				BCB047462AF5B93B004C5A98 /* InfoDetails.swift in Sources */,
+				BCB0474A2AF5DD14004C5A98 /* HelloView.swift in Sources */,
+				BCB047482AF5C16F004C5A98 /* String.swift in Sources */,
+				BCB0473D2AF5A6F1004C5A98 /* Date.swift in Sources */,
 				BCFF956E2AF564BA0027ADDB /* ContentView.swift in Sources */,
+				BCB0473B2AF5A5BA004C5A98 /* ListOfPosts.swift in Sources */,
+				BCB047442AF5B92A004C5A98 /* InfoRow.swift in Sources */,
+				BCB0473F2AF5A85E004C5A98 /* Country.swift in Sources */,
+				BCB0474C2AF5DD98004C5A98 /* SettingsView.swift in Sources */,
 				BCFF956C2AF564BA0027ADDB /* GrandPrixCalendarApp.swift in Sources */,
+				BCB047422AF5B5BB004C5A98 /* InfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
