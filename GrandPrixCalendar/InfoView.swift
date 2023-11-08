@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct InfoView: View {
+    
+    var titleOn: Bool
+    var rowHeight: Double
+    
     var body: some View {
         NavigationView {
             List(ListOfPosts.posts) { post in
@@ -16,13 +20,15 @@ struct InfoView: View {
                 } label: {
                     InfoRow(post: post)
                 }
+                .frame(height: rowHeight)
+                .ignoresSafeArea()
             }
-            .navigationTitle("F1 2024 calendar")
+            .navigationTitle(titleOn ? "F1 2024 calendar" : "")
             .listStyle(.plain)
         }
     }
 }
 
 #Preview {
-    InfoView()
+    InfoView(titleOn: true, rowHeight: 50.0)
 }

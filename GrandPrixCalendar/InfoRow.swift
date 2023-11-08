@@ -31,8 +31,7 @@ struct InfoRow: View {
                         .font(.caption)
                     Spacer()
                 }
-            }
-            
+            }            
         }
         .background(Color.clear)
     }

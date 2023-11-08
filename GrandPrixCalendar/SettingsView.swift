@@ -7,42 +7,60 @@
 
 import SwiftUI
 
-enum Themes: String {
-    case system = "System", light = "Light", dark = "Dark"
-}
-
 struct SettingsView: View {
+        
+    @Environment(\.colorScheme) var colorScheme
     
-    var themes = ["System", "Light", "Dark"]
+    @Binding var titleOn: Bool
+    @Binding var rowHeight: Double
     
     @State private var isHideFinished = false
     @State private var isShowingYear = true
-    @State private var chosenTheme = "System"
-    @State private var secretSetting = 10.0
+    @State private var isChanging = false
     
     var body: some View {
         NavigationView {
-            Form {
-                Section {
-                    Toggle("Hide finished races", isOn: $isHideFinished)
-                    Toggle("Show dates with year", isOn: $isShowingYear)
-                    Picker("Appearance", selection: $chosenTheme) {
-                        ForEach(themes, id: \.self) {
-                            Text($0)
+            VStack {
+                Form {
+                    Section {
+                        switch colorScheme {
+                        case .light:
+                            Text("Light Theme enabled")
+                        case .dark:
+                            Text("Dark Theme enabled")
+                        @unknown default:
+                            Text("It is impossible to define a color scheme")
                         }
                     }
-                }
-                Section {
-                    Text("Secret setting")
-                    Slider(value: $secretSetting, in: 1...10)
-                    Text("Your choice is: \(Int(secretSetting))")
+                    Section {
+                        Toggle("Enable navigation title", isOn: $titleOn)
+                        if titleOn {
+                            Text("Navigation title enabled")
+                        }
+                    }
+                    Section {
+                        Text("Row height: \(Int(rowHeight))")
+                        Slider(value: $rowHeight, in: 40...80, step: 1) { changing in
+                            isChanging = changing
+                        }
+                    }
+                    Section {
+                        if isChanging {
+                            let randomRound = Int.random(in: 1...21)
+                            InfoRow(post: ListOfPosts.posts[randomRound])
+                                .frame(height: rowHeight)
+                                .padding(0)
+                        }
+                    }
+                    .padding(0)
+                    .frame(height: rowHeight)
                 }
             }
-            .navigationTitle("Settings")
+            .navigationTitle(titleOn ? "Settings" : "")
         }
     }
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(titleOn: .constant(true), rowHeight: .constant(50.0))
 }
