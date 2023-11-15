@@ -14,7 +14,6 @@ struct InfoRow: View {
         HStack {
             post.image
                 .resizable()
-                .scaledToFit()
                 .scaledToFill()
                 .clipShape(Circle())
                 .frame(width: 40, height: 40)
@@ -33,7 +32,6 @@ struct InfoRow: View {
                 }
             }            
         }
-        .background(Color.clear)
     }
 }
 

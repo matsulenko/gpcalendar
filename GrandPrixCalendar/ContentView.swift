@@ -19,9 +19,9 @@ struct ContentView: View {
                     Label("Calendar", systemImage: "calendar")
                         .foregroundColor(.red)
                 }
-            HelloView()
+            ResultsView(titleOn: titleOn, rowHeight: rowHeight)
                 .tabItem {
-                    Label("Hello", systemImage: "hand.wave.fill")
+                    Label("Results", systemImage: "trophy.fill")
                 }
             SettingsView(titleOn: $titleOn, rowHeight: $rowHeight)
                 .tabItem {
