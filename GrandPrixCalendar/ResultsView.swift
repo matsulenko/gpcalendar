@@ -20,22 +20,45 @@ struct ResultsView: View {
                     SpriteView(scene: ResultsScene(size: geo.size))
                         .frame(width: geo.size.width,
                                height: geo.size.height)
+                        .brightness(-0.2)
+                        .blur(radius: 2.0, opaque: true)
                 }
                 .ignoresSafeArea(edges: [.top, .leading, .trailing])
-                List(DriverChampionship.season2023) { driver in
-                label: do {
-                    ResultsRow(driver: driver)
-                        .background(Color.clear)
-                }
-                }
-                .listStyle(.automatic)
-                .scrollContentBackground(.hidden)
-                .opacity(0.95)
                 
+                ScrollView {
+                    ForEach(DriverChampionship.season2023) { driver in
+                        ResultsRow(driver: driver)
+                            .background(Color.clear)
+                    }
+                    .padding()
+                }
+                .foregroundColor(.white)
+                .navigationBarTitle(titleOn ? "Drivers championship" : "", displayMode: .large)
+                .background(UINavigationConfiguration { nc in
+                    nc.navigationBar.largeTitleTextAttributes = [.foregroundColor : UIColor.white]
+                })
             }
-            .navigationTitle(titleOn ? "Drivers championship" : "")
+            .navigationViewStyle(StackNavigationViewStyle())
 
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+    }
+}
+
+struct UINavigationConfiguration: UIViewControllerRepresentable {
+    var config: (UINavigationController) -> Void = {_ in }
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        let controller = UIViewController()
+        DispatchQueue.main.async {
+            if let nc = controller.navigationController {
+                self.config(nc)
+            }
+        }
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
     }
 }
 
