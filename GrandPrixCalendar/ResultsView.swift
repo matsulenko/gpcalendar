@@ -29,6 +29,7 @@ struct ResultsView: View {
                     ForEach(DriverChampionship.season2023) { driver in
                         ResultsRow(driver: driver)
                             .background(Color.clear)
+                            .frame(height: rowHeight)
                     }
                     .padding()
                 }
