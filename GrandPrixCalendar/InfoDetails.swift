@@ -53,12 +53,3 @@ struct InfoDetails: View {
 #Preview {
     InfoDetails(post: ListOfPosts.posts[0])
 }
-
-//var season: Int
-//var roundNumber: Int
-//var title: String
-//var description: String
-//var country: Country
-//var city: String
-//var raceDate: Date?
-//var image: Image
