@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @AppStorage("titleOn") var titleOn: Bool = true
+    @AppStorage("rowHeight") var rowHeight: Double = 50.0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            InfoView(titleOn: titleOn, rowHeight: rowHeight)
+                .tabItem {
+                    Label("Calendar", systemImage: "calendar")
+                        .foregroundColor(.red)
+                }
+            ResultsView(titleOn: titleOn, rowHeight: rowHeight)
+                .tabItem {
+                    Label("Results", systemImage: "trophy.fill")
+                }
+            SettingsView(titleOn: $titleOn, rowHeight: $rowHeight)
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
-        .padding()
     }
 }
 
