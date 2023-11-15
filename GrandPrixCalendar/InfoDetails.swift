@@ -13,16 +13,8 @@ struct InfoDetails: View {
     var body: some View {
         ScrollView {
             VStack {
-                Text(String().roundToString(round: post.id))
-                    .foregroundStyle(.red)
-                    .bold()
-                    .padding(5)
                 Text(post.shortName + " " + String(post.season))
                     .font(.title).fontWeight(.bold)
-                
-                
-                
-                                
                 post.image
                     .resizable()
                     .scaledToFit()
@@ -47,6 +39,8 @@ struct InfoDetails: View {
             }
             .padding()
         }
+        .navigationTitle(String().roundToString(round: post.id))
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
