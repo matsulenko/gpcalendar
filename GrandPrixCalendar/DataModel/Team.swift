@@ -18,4 +18,5 @@ enum Team: String {
     case mercedes = "Mercedes"
     case redBull = "Red Bull Racing Honda RBPT"
     case williams = "Williams Mercedes"
+    case noTeam = "—"
 }
