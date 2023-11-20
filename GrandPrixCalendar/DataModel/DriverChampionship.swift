@@ -16,61 +16,61 @@ class DriverChampionship {
             country: .netherlands,
             team: .redBull,
             id: 1,
-            points: 524
+            points: 549
         ), Driver(
             name: "Sergio Perez",
             country: .mexico,
             team: .redBull,
             id: 2,
-            points: 258
+            points: 273
         ), Driver(
             name: "Lewis Hamilton",
             country: .uk,
             team: .mercedes,
             id: 3,
-            points: 226
-        ), Driver(
-            name: "Fernando Alonso",
-            country: .spain,
-            team: .astonMartin,
-            id: 4,
-            points: 198
-        ), Driver(
-            name: "Lando Norris",
-            country: .uk,
-            team: .mclaren,
-            id: 5,
-            points: 195
+            points: 232
         ), Driver(
             name: "Carlos Sainz",
             country: .spain,
             team: .ferrari,
+            id: 4,
+            points: 200
+        ), Driver(
+            name: "Fernando Alonso",
+            country: .spain,
+            team: .astonMartin,
+            id: 5,
+            points: 200
+        ), Driver(
+            name: "Lando Norris",
+            country: .uk,
+            team: .mclaren,
             id: 6,
-            points: 192
+            points: 195
         ), Driver(
             name: "Charles Leclerc",
             country: .monaco,
             team: .ferrari,
             id: 7,
-            points: 170
+            points: 188
         ), Driver(
             name: "George Russell",
             country: .uk,
             team: .mercedes,
             id: 8,
-            points: 156
+            points: 160
         ), Driver(
             name: "Oscar Piastri",
             country: .australia,
             team: .mclaren,
             id: 9,
-            points: 87
+            points: 89
         ), Driver(
             name: "Lance Stroll",
             country: .canada,
             team: .astonMartin,
             id: 10,
-            points: 63
+            points: 73
         ), Driver(
             name: "Pierre Gasly",
             country: .france,
@@ -82,7 +82,7 @@ class DriverChampionship {
             country: .france,
             team: .alpine,
             id: 12,
-            points: 46
+            points: 58
         ), Driver(
             name: "Alexander Albon",
             country: .thailand,
@@ -128,7 +128,7 @@ class DriverChampionship {
         ), Driver(
             name: "Liam Lawson",
             country: .newZealand,
-            team: .alphaTauri,
+            team: .noTeam,
             id: 20,
             points: 2
         ), Driver(
@@ -140,7 +140,7 @@ class DriverChampionship {
         ), Driver(
             name: "Nyck De Vries",
             country: .netherlands,
-            team: .alphaTauri,
+            team: .noTeam,
             id: 22,
             points: 0
         )
